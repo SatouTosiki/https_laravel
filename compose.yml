@@ -9,9 +9,10 @@ services:
     expose:
       - 9000
 
-  mysql:
-    image: mysql
-    container_name: mysqltest
+  db:
+    build:
+      context: .
+      dockerfile: docker/db/Dockerfile
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: laraveldb
@@ -29,11 +30,11 @@ services:
     image: phpmyadmin/phpmyadmin
     environment:
       - PMA_ARBITRARY=1
-      - PMA_HOSTS=mysqltest
-      - PMA_USER=laravelprweb
+      - PMA_HOSTS=db
+      - PMA_USER=laravelpr
       - PMA_PASSWORD=tosiki
     ports:
-      - 2929:803
+      - 2929:80
 
   web:
     container_name: web
