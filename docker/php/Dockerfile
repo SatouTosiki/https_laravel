@@ -33,12 +33,6 @@ RUN npm install
 # アプリケーションのソースコードをコピー
 COPY src ./
 
-# Viteを使ってアセットをビルド
-RUN npm run build
-
-# Composerの自動ローダーを生成
-#RUN composer dump-autoload --optimize
-
 # エントリポイントスクリプトをコピーし、実行権限を付与
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
