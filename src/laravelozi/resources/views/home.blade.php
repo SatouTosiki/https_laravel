@@ -14,7 +14,13 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('ログイン中!') }}
+                     <!-- Logout button -->
+                     <form action="{{ route('logout') }}" method="POST" class="mt-3">
+                        @csrf
+                        <button type="submit" class="btn btn-danger">
+                            {{ __('ログアウト') }}
+                        </button>
                 </div>
             </div>
         </div>
