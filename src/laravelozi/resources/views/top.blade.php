@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
-        <meta charset="utf-8">
-        <title>Laravel</title>
-    </head>
-    <body>
-@extends('layouts.app')
-<!-- ヘッダー部分 app.blade.phpから引用 -->
-@section('content')
+<!-- resources/views/home.blade.php -->
+@extends('layouts.app')  <!-- layouts.appレイアウトを拡張 -->
 
-    </body>
-</html>
+
+@section('content')  <!-- contentセクションの開始 -->
+    <h1>ホームページへようこそ</h1>
+    <p>ここにコンテンツを追加します。</p>
+@endsection  <!-- contentセクションの終了 -->
