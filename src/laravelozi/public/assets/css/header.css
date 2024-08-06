@@ -1,12 +1,21 @@
 .navbar {
-    background-color: rosybrown !important;
+    /* background-color: rosybrown !important; */
     color: #fff !important;
 }
 
 .nav-link {
-    color: #fff !important;
+    color: red !important;
 }
 
 .navbar-brand {
-    color: #fff !important;
+    color: red !important; 
+    font-family: "Tsukimi Rounded", sans-serif !important;
+    font-style: normal  !important;
 }
+
+.nav-item {
+    color: red !important;
+    font-family: "Tsukimi Rounded", sans-serif !important;
+    font-style: normal  !important;
+}
+

@@ -2,8 +2,6 @@
 
 @section('content')
 
-    <div class="content">
-        <h1>作成page</h1>
-        <p>ここにコンテンツを追加します。</p>
-    </div>
+<input type="file" id="image" name="image" accept="image/*">
+
 @endsection
