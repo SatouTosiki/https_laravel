@@ -1,0 +1,50 @@
+.textColor {
+    color: red;
+}
+
+h1 {
+    font-family: "Tsukimi Rounded", sans-serif;
+    font-style: normal;
+    padding: 1%;
+}
+
+#titleDiv {
+    text-align: center;
+    padding: 1%;
+}
+
+#title {
+    font-family: "Tsukimi Rounded", sans-serif;
+    font-style: normal;
+    border: 2px solid pink;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+}
+/* inputを押すと赤くなる */
+#title:focus {
+    border-color: hotpink;
+    box-shadow: 0 0 5px red;
+}
+
+#options {
+    margin: 2%;
+    padding: 1%;
+    /* background-color: antiquewhite; */
+    /* background: #fff0f5; */
+    text-align: center;
+    /*小要素のoptionをセンターにしている */
+    /*border:2px dotted red; /*枠の設定*/
+    /*border-radius: 30px;
+    max-width: 80%; /* ここで横幅の最大値を設定します */
+    /*margin: 0 auto; /* 上下のマージンを0、左右のマージンを自動にして中央揃えにします */
+}
+
+.option {
+    padding: 2%;
+    border:2px dotted red; /*枠の設定*/
+    border-radius: 30px;
+    max-width: 60%; /* ここで横幅の最大値を設定します */
+    margin: 0 auto; /* 上下のマージンを0、左右のマージンを自動にして中央揃えにします */
+}
