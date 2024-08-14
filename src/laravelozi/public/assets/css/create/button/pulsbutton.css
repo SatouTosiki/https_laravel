@@ -1,0 +1,30 @@
+.button button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  background-color: #ccc;
+  border-radius: 50vh;
+  transition: 0.3s;
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+.button button svg {
+  width: 24px;
+  height: 24px;
+  stroke: #333; /* Default color */
+  transition: 0.3s;
+}
+
+.button button:hover {
+  background-color: #333333;
+}
+
+
+.button button:hover svg {
+  stroke: #f2f2f2; /* Change color on hover */
+}
+

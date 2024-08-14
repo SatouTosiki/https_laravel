@@ -17,7 +17,7 @@ h1 {
     font-family: "Tsukimi Rounded", sans-serif;
     font-style: normal;
     border: 2px solid pink;
-    border-radius: 15px;
+    border-radius: 15px; /*角を丸める部分*/
     padding: 10px;
     font-size: 16px;
     outline: none;
@@ -29,7 +29,6 @@ h1 {
 }
 
 #options {
-    margin: 2%;
     padding: 1%;
     /* background-color: antiquewhite; */
     /* background: #fff0f5; */
@@ -47,4 +46,32 @@ h1 {
     border-radius: 30px;
     max-width: 60%; /* ここで横幅の最大値を設定します */
     margin: 0 auto; /* 上下のマージンを0、左右のマージンを自動にして中央揃えにします */
+    display: flex;
+    /* gap: 10px; */
 }
+.option > div {
+    flex: 1; /* Optional: Make both divs take up equal space */
+}
+
+.textStyle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.textStyle input {
+    padding: 10px; /* テキスト入力フィールドに余白を追加 */
+    font-size: 16px; /* フォントサイズを調整 */
+    border-radius: 5px; /* 角を丸くする場合 */
+    box-sizing: border-box; /* paddingを含めた全体の幅を100%にする */
+    border: 2px solid plum;
+    outline: none;
+    border-radius: 15px;
+}
+
+#pushbutton {
+    padding: 1%;
+    text-align: center;
+}
+
+
+
