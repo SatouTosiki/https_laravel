@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
+
 
 class logcheck extends Controller
 {
@@ -12,7 +12,7 @@ class logcheck extends Controller
         if (Auth::check()) {
             return redirect()->route('createpage');
         } else {
-            return redirect()->route('login')->with('alert', 'ログインしてください');
+            return redirect()->route('login');
         }
     }
 }
