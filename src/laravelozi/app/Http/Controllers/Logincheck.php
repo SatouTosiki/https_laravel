@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 
 
-class logcheck extends Controller
+class Logincheck extends Controller
 {
     public function redirectToCreatePage()
     {

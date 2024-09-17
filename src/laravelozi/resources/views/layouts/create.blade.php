@@ -5,7 +5,7 @@
 <body>
     <div>
         <div>
-            <a href="{{ route('auth-check') }}">
+             <a href="{{ route('auth-check') }}"> <!-- Logincheckしている -->
                 <div class="post-btn">
                     <i class="fas fa-plus"></i>
                 </div>

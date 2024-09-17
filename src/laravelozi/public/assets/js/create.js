@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (fileInput.files && fileInput.files[0]) {
                 const reader = new FileReader();
                 reader.onload = function(e) {
-                    fileSelectButton.innerHTML = `<img src="${e.target.result}" alt="選択した画像" class="button_img">`;
+                    fileSelectButton.innerHTML = `<img src="${e.target.result}" alt="選択した画像" class="button_img" id="img_${optionCount}" >`;//ここで選んだ画像を表示している
                 }
                 reader.readAsDataURL(fileInput.files[0]);
             }
