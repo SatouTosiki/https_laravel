@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let optionCount = 1;
 
     // 初期のボタンにイベントを設定
-    setFileInputListener('image_1', document.querySelector('.fileButton'));
+    UserChoiceImg('image_1', document.querySelector('.fileButton'));
 
     function addOption() {
         if (optionCount >= 4) {
@@ -30,10 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('options').appendChild(optionDiv);
 
         // 新しく追加されたボタンにイベントを設定
-        setFileInputListener(`image_${optionCount}`, optionDiv.querySelector('.fileButton'));
+        //この行でUserChoice関数を動かしている
+        UserChoiceImg(`image_${optionCount}`, optionDiv.querySelector('.fileButton'));
     }
 
-    function setFileInputListener(inputId, fileSelectButton) {
+    function UserChoiceImg(inputId, fileSelectButton) {
         const fileInput = document.getElementById(inputId);
 
         fileSelectButton.addEventListener('click', function() {

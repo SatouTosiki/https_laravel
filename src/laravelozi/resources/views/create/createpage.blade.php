@@ -36,18 +36,21 @@
                 </div>
             </div>
         </div>
-        <div class="button">
+        <br>
+        <div id="pushbutton">
+            <button class="pushButton" type="submit">投稿</button>
+        </div>
+    </form>
+
+
+    <!-- 選択肢を増やすbutton -->
+    <div class="button">
             <button type="button" onclick="addOption()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
                 </svg>
             </button>
         </div>
-        <br>
-        <div id="pushbutton">
-            <button class="pushButton" type="submit">投稿</button>
-        </div>
-    </form>
 
 
 @endsection
