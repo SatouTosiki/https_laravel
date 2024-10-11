@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
-require __DIR__.'/create.php';//createページから読み込んでいる
-require __DIR__.'/createpush.php';//createpushページから読み込んでいる
+require __DIR__.'/create.php';//createページを読み込んでいる
+require __DIR__.'/createpush.php';//createpushページを読み込んでいる
 
 Auth::routes();//laraveluiの認証機能の１行
 

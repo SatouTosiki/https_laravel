@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Logincheck;
 use App\Http\Controllers\PostController;
 
 //投稿ボタンを押した時
