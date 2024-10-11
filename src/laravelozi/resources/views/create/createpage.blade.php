@@ -15,7 +15,7 @@
 
 <body>
     <h1 class="textColor">アンケート作成page</h1>
-    <form method="POST" enctype="multipart/form-data">
+    <form method="POST" enctype="multipart/form-data" action="{{ route('post.')">
         <div id="titleDiv">
             <input type="text" id="title" name="title" placeholder="タイトル入力" required>
         </div>
@@ -23,18 +23,26 @@
         <div id="options">
             <div class="option">
                 <div>
-                    <input type="file" id="image_1" name="options[0][image]" multiple accept="image/*" style="display:none" />
+                    <input type="file" id="image_1" name="img1" multiple accept="image/*" style="display:none"  required>
                     <button class="fileButton" type="button">
-                        <span class="button_text">画像</span>
+                        <span class="button_text">画像必須</span>
                         <span class="button_icon">
                             <ion-icon name="add-circle-outline"></ion-icon>
                         </span>
                     </button>
                 </div>
                 <div class="textStyle">
-                    <input type="text" id="text_1" name="options[0][text]" required>
+                    <input type="text" id="text_1" name="リスト内番号[1][text]" placeholder="タイトル(必須)" required>
                 </div>
             </div>
+        </div>
+        <!-- 選択肢を増やすbutton -->
+        <div class="button">
+            <button type="button" onclick="addOption()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+                </svg>
+            </button>
         </div>
         <br>
         <div id="pushbutton">
@@ -43,14 +51,6 @@
     </form>
 
 
-    <!-- 選択肢を増やすbutton -->
-    <div class="button">
-            <button type="button" onclick="addOption()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
-                </svg>
-            </button>
-        </div>
 
 
 @endsection
