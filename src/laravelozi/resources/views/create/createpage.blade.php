@@ -1,6 +1,8 @@
 <!-- resources/views/polls/create.blade.php -->
 @extends('layouts.app')
 
+
+
 @section('content')
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
