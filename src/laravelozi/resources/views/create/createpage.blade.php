@@ -17,7 +17,8 @@
 
 <body>
     <h1 class="textColor">アンケート作成page</h1>
-    <form method="POST" enctype="multipart/form-data" action="{{ route('post.')">
+    <form method="POST" enctype="multipart/form-data" action="{{ route('post.store') }}">
+        <!-- createpushのrouteのnameを指定している -->
         <div id="titleDiv">
             <input type="text" id="title" name="title" placeholder="タイトル入力" required>
         </div>

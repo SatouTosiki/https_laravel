@@ -10,11 +10,8 @@ Auth::routes();//laraveluiの認証機能の１行
 
 Route::get('/', function () {
     return view('top');
-});
+})->name('top');
 
-Route::get('/createpage', function () {
-    return view('create/createpage');
-})->name('createpage');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
