@@ -63,16 +63,14 @@ h1 {
     font-size: 16px; /* フォントサイズを調整 */
     border-radius: 5px; /* 角を丸くする場合 */
     box-sizing: border-box; /* paddingを含めた全体の幅を100%にする */
-    border: 2px solid plum;
+    border: 2px solid rgb(251, 146, 146);
     outline: none;
     border-radius: 15px;
 }
 
-#pushbutton {
-    padding: 2%;
-    text-align: center;
-    /* 投稿ボタンを真ん中にしている */
-}
+
+
+
 
 
 

@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="{{ asset('assets/css/create/button/createbutton.css')}}">
 <link rel="stylesheet" href="{{ asset('assets/css/create/button/pulsbutton.css')}}">
 <link rel="stylesheet" href="{{ asset('assets/css/create/button/pushbutton.css')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script src="{{ asset('/assets/js/create.js')}}"></script>
@@ -18,7 +19,7 @@
 <body>
     <h1 class="textColor">アンケート作成page</h1>
     <form method="POST" enctype="multipart/form-data" action="{{ route('post.store') }}">
-        <!-- createpushのrouteのnameを指定している -->
+        <!-- routesフォルダのcreatepushのrouteのnameを指定している -->
         <div id="titleDiv">
             <input type="text" id="title" name="title" placeholder="タイトル入力" required>
         </div>
@@ -26,7 +27,7 @@
         <div id="options">
             <div class="option">
                 <div>
-                    <input type="file" id="image_1" name="img1" multiple accept="image/*" style="display:none"  required>
+                    <input type="file" id="image_1" name="img1" multiple accept="image/*" style="display:none" >
                     <button class="fileButton" type="button">
                         <span class="button_text">画像必須</span>
                         <span class="button_icon">
@@ -35,7 +36,7 @@
                     </button>
                 </div>
                 <div class="textStyle">
-                    <input type="text" id="text_1" name="リスト内番号[1][text]" placeholder="タイトル(必須)" required>
+                    <input type="text" id="text_1" name="text1" placeholder="タイトル(必須)" >
                 </div>
             </div>
         </div>
@@ -48,8 +49,11 @@
             </button>
         </div>
         <br>
+        <!-- 投稿ボタン -->
         <div id="pushbutton">
-            <button class="pushButton" type="submit">投稿</button>
+            <button class="pushButton" type="submit">
+                <i class="fas fa-upload"></i>
+            </button>
         </div>
     </form>
 

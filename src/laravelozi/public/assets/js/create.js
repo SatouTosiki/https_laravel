@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         optionDiv.classList.add('option');
         optionDiv.innerHTML = `
             <div>
-                <input type="file" id="image_${optionCount}" name="img${optionCount}" multiple accept="image/*" style="display:none" required>
+                <input type="file" id="image_${optionCount}" name="img${optionCount}" multiple accept="image/*" style="display:none" >
                 <button class="fileButton" type="button">
                     <span class="button_text">画像必須</span>
                     <span class="button_icon">

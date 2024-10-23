@@ -1,22 +1,25 @@
 .pushButton {
-    display: inline-block;
-    width: 100px;
-    height: 80px;
+    position: fixed;
+    bottom: 10%;
+    right: 8%;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    background: red;
     border-radius: 50%;
-    background-color: #e0e0e0;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.3s;
-    position: relative;
-}
+    text-align: center;
+    display: flex;
+    justify-content: center; /* 水平方向の中央寄せ */
+    align-items: center; /* 垂直方向の中央寄せ */
+    border-style: none;  /* 枠線消している */
+  }
 
+  .post-btn i {
+    font-size: 30px; /* アイコンサイズ */
+    color: white; /* アイコンの色 */
+  }
 
-.pushButton:hover {
-    background-color: pink;
-    transform: translateY(-3px);
-}
-
-.pushButton:hover::before {
-    color: #fff;
-}
+  
