@@ -23,15 +23,20 @@ class PostController extends Controller
 
         // 新しい Post モデルを作成し、データを保存
         $post = new Post;
+        $img1_path = $request->file('img1')->store('public/images');
+        $img2_path = $request->file('img2')->store('public/images');
+        $img3_path = $request->file('img3')->store('public/images');
+        $img4_path = $request->file('img4')->store('public/images');
+
         $post->title = $validatedData['title'];
         $post->text1 = $validatedData['text1'];
         $post->text2 = $validatedData['text2'];
         $post->text3 = $validatedData['text3'] ?? null;
         $post->text4 = $validatedData['text4'] ?? null;
-        $post->image1_path = $validatedData['image1_path'] ?? null;
-        $post->image2_path = $validatedData['image2_path'] ?? null;
-        $post->image3_path = $validatedData['image3_path'] ?? null;
-        $post->image4_path = $validatedData['image4_path'] ?? null;
+        $post->image1_path = $img1_path ?? null;
+        $post->image2_path = $img2_path ?? null;
+        $post->image3_path = $img3_path ?? null;
+        $post->image4_path = $img4_path ?? null;
 
         // 他のフィールドがある場合はここに追加
         $post->save();
