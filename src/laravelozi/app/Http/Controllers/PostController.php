@@ -15,10 +15,10 @@ class PostController extends Controller
             'text2' => 'required|string|max:10',
             'text3' => 'nullable|string|max:10',
             'text4' => 'nullable|string|max:10',
-            'image1_path' => 'nullable|image|max:2048',
-            'image2_path' => 'nullable|image|max:2048',
-            'image3_path' => 'nullable|image|max:2048',
-            'image4_path' => 'nullable|image|max:2048',
+            // 'image1_path' => 'nullable|image|max:2048',
+            // 'image2_path' => 'nullable|image|max:2048',
+            // 'image3_path' => 'nullable|image|max:2048',
+            // 'image4_path' => 'nullable|image|max:2048',
         ]);
 
         // 新しい Post モデルを作成し、データを保存
