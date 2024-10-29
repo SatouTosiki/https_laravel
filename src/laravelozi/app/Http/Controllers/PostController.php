@@ -16,17 +16,16 @@ class PostController extends Controller
             'text3' => 'nullable|string|max:10',
             'text4' => 'nullable|string|max:10',
         ]);
-
+    
+        // 画像ファイルの保存（存在する場合のみ保存）
+        $img1_path = $request->hasFile('img1') ? $request->file('img1')->store('public/images') : null;
+        $img2_path = $request->hasFile('img2') ? $request->file('img2')->store('public/images') : null;
+        $img3_path = $request->hasFile('img3') ? $request->file('img3')->store('public/images') : null;
+        $img4_path = $request->hasFile('img4') ? $request->file('img4')->store('public/images') : null;
+    
         // 新しい Post モデルを作成し、データを保存
-        //img〇はcreatepage.blade.phpのnameから引用している
-
-        $img1_path = $request->file('img1')->store('public/images');
-        $img2_path = $request->file('img2')->store('public/images');
-        $img3_path = $request->file('img3')->store('public/images');
-        $img4_path = $request->file('img4')->store('public/images');
-
         $post = new Post;
-
+    
         $post->title = $validatedData['title'];
         $post->text1 = $validatedData['text1'];
         $post->text2 = $validatedData['text2'];
@@ -34,14 +33,14 @@ class PostController extends Controller
         $post->text4 = $validatedData['text4'] ?? null;
         $post->image1_path = $img1_path;
         $post->image2_path = $img2_path;
-        $post->image3_path = $img3_path ?? null;
-        $post->image4_path = $img4_path ?? null;
-
+        $post->image3_path = $img3_path;
+        $post->image4_path = $img4_path;
+    
         // 他のフィールドがある場合はここに追加
         $post->save();
-
+    
         // 投稿成功後にリダイレクト（例: 投稿一覧ページへ）
         return redirect()->route('top');
-        //投稿が終わったらtop画面に飛ばしている
     }
+    
 }
