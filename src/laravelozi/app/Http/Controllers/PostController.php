@@ -17,6 +17,7 @@ class PostController extends Controller
             'text4' => 'nullable|string|max:10',
         ]);
     
+        
         // 画像ファイルの保存（存在する場合のみ保存）
         $img1_path = $request->hasFile('img1') ? $request->file('img1')->store('public/images') : null;
         $img2_path = $request->hasFile('img2') ? $request->file('img2')->store('public/images') : null;
