@@ -13,7 +13,7 @@ Route::get('/', function () {
     return view('top');
 })->name('top');
 
-Route::get('sample/model', [PostController::class, 'model']);
+Route::get('sample', [PostController::class, 'model']);
 
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
