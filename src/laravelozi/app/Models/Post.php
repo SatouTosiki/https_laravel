@@ -7,6 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    use HasFactory;
+    protected $table = 'posts';
+
+    protected $guarded = array('id');
+
+    public $timestamps = false;
+
+    public function getData(){
+        
+        $data = DB::table($this->table)->get();
+        return $data;
+    }
 
 }

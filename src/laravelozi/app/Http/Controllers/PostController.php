@@ -17,7 +17,7 @@ class PostController extends Controller
             'text4' => 'nullable|string|max:10',
         ]);
     
-        
+
         // 画像ファイルの保存（存在する場合のみ保存）
         $img1_path = $request->hasFile('img1') ? $request->file('img1')->store('public/images') : null;
         $img2_path = $request->hasFile('img2') ? $request->file('img2')->store('public/images') : null;
@@ -42,6 +42,15 @@ class PostController extends Controller
     
         // 投稿成功後にリダイレクト（例: 投稿一覧ページへ）
         return redirect()->route('top');
+    }
+    //データを取得する関数
+    public function Model() {
+        $md = new Post();
+
+        $data = $md->getData();
+
+        return view('top', ['data' => $data]);
+        //topはviewのtop.blade.phpを参照
     }
     
 }
