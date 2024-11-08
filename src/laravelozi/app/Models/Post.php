@@ -10,7 +10,7 @@ class Post extends Model
 {
     protected $table = 'posts';
 
-    protected $guarded = array('id');
+   // protected $guarded = array('id');
 
     public $timestamps = false;
 

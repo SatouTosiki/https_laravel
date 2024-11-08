@@ -50,7 +50,7 @@ class PostController extends Controller
         $data = $md->getData();
 
         return view('top', ['data' => $data]);
-        //topはviewのtop.blade.phpを参照
+        //viewのtopはtop.blade.phpにreturnしている
     }
     
 }

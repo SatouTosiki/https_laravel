@@ -11,12 +11,14 @@
 <link rel="stylesheet" href="{{ asset('assets/css/create/button/createbutton.css')}}">
 <link rel="stylesheet" href="{{ asset('assets/css/create/button/pulsbutton.css')}}">
 <link rel="stylesheet" href="{{ asset('assets/css/create/button/pushbutton.css')}}">
+<link rel="stylesheet" href="{{ asset('assets/css/create/top/top.css')}}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script src="{{ asset('/assets/js/create.js')}}"></script>
 
 <body>
+    <p class="test">te</p>
     <h1 class="textColor">アンケート作成page</h1>
     <form method="POST" enctype="multipart/form-data" action="{{ route('post.store') }}">
         <!-- routesフォルダのcreatepushのrouteのnameを指定している -->
