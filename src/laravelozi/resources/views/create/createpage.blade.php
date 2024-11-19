@@ -18,7 +18,6 @@
 <script src="{{ asset('/assets/js/create.js')}}"></script>
 
 <body>
-    <p class="test">te</p>
     <h1 class="textColor">アンケート作成page</h1>
     <form method="POST" enctype="multipart/form-data" action="{{ route('post.store') }}">
         <!-- routesフォルダのcreatepushのrouteのnameを指定している -->
@@ -28,7 +27,7 @@
         @csrf
         <div id="options">
             <div class="option">
-                <div>
+                <div class="image_option">
                     <input type="file" id="image_1" name="img1" multiple accept="image/*" style="display:none" >
                     <button class="fileButton" type="button">
                         <span class="button_text">画像必須</span>

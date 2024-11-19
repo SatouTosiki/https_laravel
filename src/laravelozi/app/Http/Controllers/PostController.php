@@ -32,10 +32,10 @@ class PostController extends Controller
         $post->text2 = $validatedData['text2'];
         $post->text3 = $validatedData['text3'] ?? null;
         $post->text4 = $validatedData['text4'] ?? null;
-        $post->image1_path = $img1_path;
-        $post->image2_path = $img2_path;
-        $post->image3_path = $img3_path;
-        $post->image4_path = $img4_path;
+        $post->image1_path = $img1_path ? basename($img1_path) : null;
+        $post->image2_path = $img2_path ? basename($img2_path) : null;
+        $post->image3_path = $img3_path ? basename($img3_path) : null;
+        $post->image4_path = $img4_path ? basename($img4_path) : null;
     
         // 他のフィールドがある場合はここに追加
         $post->save();
@@ -54,5 +54,3 @@ class PostController extends Controller
     }
     
 }
-
-

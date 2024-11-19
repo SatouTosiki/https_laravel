@@ -1,19 +1,22 @@
 <!-- resources/views/home.blade.php -->
+<link rel="stylesheet" href="{{ asset('assets/css/top/top.css')}}">
+<link rel="stylesheet" href="{{ asset('assets/css/create/button/create.css')}}">
 @extends('layouts.app')  <!-- layouts.appレイアウトを拡張 -->
 
 @section('content')  <!-- contentセクションの開始 -->
-<link rel="stylesheet" href="{{ asset('assets/css/top/top.css')}}">
+
+@foreach($data as $d)
+    <div class="test">
+        <div class="tests">
+            <h2>{{ asset($d->title) }}</h2>
+        <p>{{ asset($d->image1_path) }}</p> <!-- パスを表示 -->
+        <img src="{{ asset('storage/images/' . $d->image4_path) }}" alt="pushimage">
+
+            {{$d->title}}
+            {{$d->id}}
+        </div>
+    </div>
+@endforeach
 
     @include('layouts.create')<!--これがくりえいとページに飛ぶbutton -->
-    <h1>ホームページ</h1>
-    <p class="test_text">ここにコンテンツを追加します</p>
-    
-    <ul>
-        @foreach($data as $d)
-    
-            {{$d->id}}
-            <br>
-        
-        @endforeach
-    </ul>
 @endsection  <!-- contentセクションの終了 -->

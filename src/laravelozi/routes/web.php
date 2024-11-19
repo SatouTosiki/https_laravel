@@ -13,10 +13,9 @@ Auth::routes();//laraveluiの認証機能の１行
 //     return view('top');
 // })->name('top');
 
-Route::get('/', [PostController::class, 'model'])->name('home');
+Route::get('/', [PostController::class, 'model'])->name('top');
 
 Route::get('sample', [PostController::class, 'model']);
-
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 

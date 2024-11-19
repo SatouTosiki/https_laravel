@@ -28,7 +28,7 @@ h1 {
     box-shadow: 0 0 5px red;
 }
 
-#options {
+.options {
     padding: 1%;
     /* background-color: antiquewhite; */
     /* background: #fff0f5; */
@@ -49,6 +49,7 @@ h1 {
     display: flex;
     /* gap: 10px; */
 }
+
 .option > div {
     flex: 1; /* Optional: Make both divs take up equal space */
 }
