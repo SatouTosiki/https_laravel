@@ -1,14 +1,15 @@
 .textColor {
     color: red;
+    font-family: "Tsukimi Rounded", sans-serif;
 }
 
 h1 {
-    font-family: "Tsukimi Rounded", sans-serif;
+    /* font-family: "Tsukimi Rounded", sans-serif; */
     font-style: normal;
     padding: 1%;
 }
 
-#titleDiv {
+.titleDiv {
     text-align: center;
     padding: 1%;
 }
@@ -41,7 +42,7 @@ h1 {
 }
 
 .option {
-    padding: 2%;
+    padding: 0.5%;
     border:2px dotted red; /*枠の設定*/
     border-radius: 30px;
     max-width: 60%; /* ここで横幅の最大値を設定します */

@@ -1,3 +1,30 @@
 p {
     color: red;
 }
+
+h2 {
+    font-family: "Tsukimi Rounded", sans-serif;
+}
+
+.posts {
+    display:flex;
+    justify-content: center;
+}
+
+.tests {
+    border:2px dotted red; /*枠の設定*/
+
+}
+
+.imgs {
+    border-radius: 40px;
+    width: 100%; 
+    height: 100px; 
+    box-shadow: none;
+    background-color: #f0f0f0; /* ボタンの背景色 */
+    display: flex; /* アイコンとテキストを中央揃えにする */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none; /*縁を消している */
+}

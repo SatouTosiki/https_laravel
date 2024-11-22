@@ -21,7 +21,7 @@
     <h1 class="textColor">アンケート作成page</h1>
     <form method="POST" enctype="multipart/form-data" action="{{ route('post.store') }}">
         <!-- routesフォルダのcreatepushのrouteのnameを指定している -->
-        <div id="titleDiv">
+        <div class="titleDiv">
             <input type="text" id="title" name="title" placeholder="タイトル入力" required>
         </div>
         @csrf

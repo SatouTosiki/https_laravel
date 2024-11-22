@@ -45,12 +45,22 @@ class PostController extends Controller
     }
     //データを取得する関数
     public function Model() {
-        $md = new Post();
 
-        $data = $md->getData();
-
+        $data = Post::all()->map(function ($post) {
+            return [
+                'title' => $post->title,
+                'options' => [
+                    ['image' => $post->image1_path, 'text' => $post->text1],
+                    ['image' => $post->image2_path, 'text' => $post->text2],
+                    ['image' => $post->image3_path, 'text' => $post->text3],
+                    ['image' => $post->image4_path, 'text' => $post->text4],
+                ],
+            ];
+        });
         return view('top', ['data' => $data]);
         //viewのtopはtop.blade.phpにreturnしている
     }
+
+    
     
 }
